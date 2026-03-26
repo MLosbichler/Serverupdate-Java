@@ -1,4 +1,4 @@
-package com.dvhaus;
+package com.dvhaus.hostreader;
 
 public class HostsEntry {
     private final String ip;

@@ -1,4 +1,4 @@
-package com.dvhaus;
+package com.dvhaus.hostreader;
 
 import java.io.IOException;
 import java.nio.file.Files;
@@ -6,6 +6,15 @@ import java.nio.file.Paths;
 import java.util.List;
 import java.util.stream.Collectors;
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+
+/**
+ * 
+ * 
+ * @author Manuel Losbichler
+ * @version 1.0, 26.03.2026
+ */
 public class HostsReader {
     private final String HOSTSPATH = "C:\\Windows\\System32\\drivers\\etc\\hosts";
     private List<HostsEntry> hosts;
@@ -18,8 +27,8 @@ public class HostsReader {
         }
     }
 
-    public List<HostsEntry> getHosts() {
-        return hosts;
+    public ObservableList<HostsEntry> getHosts() {
+        return FXCollections.observableList(hosts);
     }
 
     private void readHosts() throws IOException {
