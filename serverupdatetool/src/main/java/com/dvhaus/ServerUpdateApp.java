@@ -8,6 +8,7 @@ import javafx.geometry.Insets;
 import javafx.scene.Group;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
+import javafx.scene.control.SelectionMode;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
@@ -35,6 +36,7 @@ public class ServerUpdateApp extends Application {
         firstCol.setCellValueFactory(new PropertyValueFactory<>("Ip"));
         secondCol.setCellValueFactory(new PropertyValueFactory<>("Hostname"));
         hosts.setItems(hostsReader.getHosts());
+        hosts.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
 
         final VBox vbox = new VBox();
         vbox.setSpacing(4);
