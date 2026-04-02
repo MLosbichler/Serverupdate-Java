@@ -1,0 +1,5 @@
+com\dvhaus\Launcher.class
+com\dvhaus\ServerConnector.class
+com\dvhaus\hostreader\HostsReader.class
+com\dvhaus\ServerUpdateApp.class
+com\dvhaus\hostreader\HostsEntry.class

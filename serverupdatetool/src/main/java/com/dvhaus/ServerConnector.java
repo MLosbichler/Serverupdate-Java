@@ -59,7 +59,7 @@ public class ServerConnector extends Thread {
             session.auth().verify(10, TimeUnit.SECONDS);
             //Uploading the selected update.tar to the server and starting the updating process.
             uploadFile(session, uploadFilePath, remoteFilePath);
-            executeUpdate(session, COMMAND);
+//            executeUpdate(session, COMMAND);
         } catch (IOException e) {
             System.err.println("Fehler bei Verbindung zu " + ip + ": " + e.getMessage());
             e.printStackTrace();
